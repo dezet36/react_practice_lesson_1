@@ -32,7 +32,7 @@ export const App = () => {
 
   return (
     <div className="hero">
-      <Header name={user.name} userName={user.username} email={user.email} />
+      <Header userInfo={user} />
       <Location userLocation={user.address} />
       <Footer userCompanyInfo={user.company} />
     </div>

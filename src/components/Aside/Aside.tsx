@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.scss";
+import { UserAddress } from "../../types/types";
 
 interface AsideProps {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
+  useradress: Omit<UserAddress, "geo">;
 }
 
-export const Aside = ({ street, suite, city, zipcode }: AsideProps) => {
+export const Aside = ({
+  useradress: { street, suite, city, zipcode },
+}: AsideProps) => {
   return (
     <aside className="aside">
       <h1>You ASIDE</h1>

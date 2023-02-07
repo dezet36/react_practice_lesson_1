@@ -7,13 +7,11 @@ import { Aside } from "../Aside/Aside";
 interface LocationProps {
   userLocation: UserAddress;
 }
-export const Location = ({
-  userLocation: { geo, street, suite, city, zipcode },
-}: LocationProps) => {
+export const Location = ({ userLocation }: LocationProps) => {
   return (
     <div className="location">
-      <Main userGeo={geo} />
-      <Aside street={street} suite={suite} city={city} zipcode={zipcode} />
+      <Main userGeo={userLocation.geo} />
+      <Aside useradress={userLocation} />
     </div>
   );
 };
